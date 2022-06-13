@@ -13,5 +13,15 @@ jobs:
         run :
         docker build -t valid_password .
       - name: run docker image
-        run:
+        run :
           docker run valid_password
+      - name: docker login
+        env :
+          DOCKER_USER: $((secrets.DOCKER_USERNAME))
+          DOCKER_PASSWORD: $((secrets.DOCKER_PASSWORD))
+        run : docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+      - name: docker tag
+        run : docker tag valid_password:latest lgrar/ajc:lastest
+      - name: docker push
+        run : docker push lgrar/ajc:tes
+
