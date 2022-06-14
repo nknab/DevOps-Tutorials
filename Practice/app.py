@@ -1,0 +1,1 @@
+print('python bien installé')
