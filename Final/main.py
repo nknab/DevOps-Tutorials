@@ -57,13 +57,14 @@ def chk_valid(_password):
     :return: True or False
     """
     password_len = 10
-    if count_char(_password) >= 10 & chk_maj(_password) & chk_special(_password):
+    if count_char(_password) >= password_len and chk_maj(_password) and chk_special(_password):
         return True
     return False
 
 # Testing the function
-result = chk_valid("C8h-N7ULBZZPUa-c!WDuRuqsr")
-if result:
+passowrd = input("Kindly enter a password: ")
+print(passowrd)
+if chk_valid(passowrd):
     print("Password is Valid")
 else:
     print("Password is Invalid")
