@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI for AJC-DevOps Tutorials
+name: CI for AJC-DevOps Tutorials.
 
 # Controls when the workflow will run
 on:
